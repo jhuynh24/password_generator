@@ -7,7 +7,7 @@ var lower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n
 var upper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var numbersArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 var special = ["!", "@", "#", "$", "%", "^", "&", "*", "=", "(", ")", "'", "+", ",", ".", "-", "/", ":", ";", "<", ">", "?", "[", "]", "|", "_", "`", "{", "}", "~"];
-    
+
 
 // Code for the initial password prompt of password length.
 function generatePassword() {
@@ -22,31 +22,31 @@ function generatePassword() {
   var upperCase = confirm("Would you like uppercase?");
   var numbers = confirm("Would you like numbers?");
   var specialCharacters = confirm("Would you like special characters?");
-  if(lowerCase === false && upperCase === false && numbers === false && specialCharacters === false) {
+  if (lowerCase === false && upperCase === false && numbers === false && specialCharacters === false) {
     alert("You must chose at least 1 type of character for a password.");
     return;
   }
-  
+
   // Code for connecting the arrays together. Code for the random generator.
   var options = [];
   var result = [];
-    if(lowerCase === true) {
-      options = options.concat(lower)
-    }
-    if(upperCase === true) {
-      options = options.concat(upper)
-    }
-    if(numbers === true) {
-      options = options.concat(numbersArray)
-    }
-    if(specialCharacters === true) {
-      options = options.concat(special)
-    }
-    var item = options[Math.floor(Math.random() * options.length)];
-    for(var i = 0; i < lengthOfPassword; i ++) {
-      result.push(options[Math.floor(Math.random() * options.length)]);
-    }
-    return result.join("");
+  if (lowerCase === true) {
+    options = options.concat(lower)
+  }
+  if (upperCase === true) {
+    options = options.concat(upper)
+  }
+  if (numbers === true) {
+    options = options.concat(numbersArray)
+  }
+  if (specialCharacters === true) {
+    options = options.concat(special)
+  }
+  var item = options[Math.floor(Math.random() * options.length)];
+  for (var i = 0; i < lengthOfPassword; i++) {
+    result.push(options[Math.floor(Math.random() * options.length)]);
+  }
+  return result.join("");
 }
 
 // Write password to the #password input
