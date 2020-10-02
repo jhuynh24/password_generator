@@ -1,5 +1,5 @@
 For this project I made a created a random password generator to supply secure and lengthy passwords that are very hard to guess. The password generator uses a series of prompts and confirms in order to determine what the user would like their password to contain. The minimum length is 8 characters and the maximum is 128 characters. The password can contain at least 1 of the following characters which include lowercase letters, uppercase letters, numbers, and special characters. The code contains prompts that are powered through javascript in order to decide what will be in the password. There are many if statements and built-in functions like confirm, concat, prompt, and Math.random to piece together an effective model for producing secure passphrases. The code also contains a series of arrays for each type of character letting the program pick randomly from them to produce a result. 
 
-![screenshot](./assets/screenshot.png)
+![screenshot](https://github.com/jhuynh24/password_generator/blob/master/assets/screenshot.PNG)
 
 https://jhuynh24.github.io/password_generator/
