@@ -11,12 +11,16 @@ var special = ["!", "@", "#", "$", "%", "^", "&", "*", "=", "(", ")", "'", "+", 
 
 // Code for the initial password prompt of password length.
 function generatePassword() {
-  var lengthOfPassword = parseInt(prompt("How many characters would you like your password to be? (Min=8; Max=128)"));
-  if (lengthOfPassword < 8 || lengthOfPassword > 128) {
+ var passwordPrompt = prompt("How many characters would you like your password to be? (Min=8; Max=128)");
+  var lengthOfPassword = parseInt(passwordPrompt);
+  if (passwordPrompt === null) {
+    return;
+  }
+  else if (lengthOfPassword < 8 || lengthOfPassword > 128) {
     alert("Please choose a password between 8 and 128 characters.");
     return;
   }
-
+  
   // Code for confirm questions about password criteria. If statement requiring the password to have at least one type of character.
   var lowerCase = confirm("Would you like lowercase characters?");
   var upperCase = confirm("Would you like uppercase?");
