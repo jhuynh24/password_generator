@@ -10,6 +10,13 @@ function generatePassword() {
     return;
   }
   
+  var lowerCase = confirm("Would you like lowercase characters?");
+  var upperCase = confirm("Would you like uppercase?");
+  var numbers = confirm("Would you like numbers?");
+  var specialCharacters = confirm("Would you like special characters?");
+  if(lowerCase === false && upperCase === false && numbers === false && specialCharacters === false) {
+    alert("You must chose at least 1 type of character for a password.");
+    return;
 
 // Write password to the #password input
 function writePassword() {
