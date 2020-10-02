@@ -17,6 +17,28 @@ function generatePassword() {
   if(lowerCase === false && upperCase === false && numbers === false && specialCharacters === false) {
     alert("You must chose at least 1 type of character for a password.");
     return;
+  }
+
+  var options = [];
+  var result = [];
+    if(lowerCase === true) {
+      options = options.concat(lower)
+    }
+    if(upperCase === true) {
+      options = options.concat(upper)
+    }
+    if(numbers === true) {
+      options = options.concat(numbersArray)
+    }
+    if(specialCharacters === true) {
+      options = options.concat(special)
+    }
+    var item = options[Math.floor(Math.random() * options.length)];
+    for(var i = 0; i < lengthOfPassword; i ++) {
+      result.push(options[Math.floor(Math.random() * options.length)]);
+    }
+    return result.join("");
+}
 
 // Write password to the #password input
 function writePassword() {
